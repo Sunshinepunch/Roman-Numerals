@@ -1,20 +1,15 @@
 Test:
-Code:
+Code:timeMachine()
 Expected:
 
 
 Test: it will convert 1 into I
-Code:timeMachine(111)
-Expected Output: III
+Code:convert(1)
+Expected Output: I
 
-Test: it will convert 5 into V
-Code:timeMachine(55)
-Expected: VV
-
-Test: it will return 50 as L, 100 as C, 500 as D, and 1000 as M
-Code:timeMachine(50, 100, 500, 1000)
-Expected:(L, C, D, M)
-
+test: it will convert 2-10 into roman numerals
+code: convert(6)
+expected output: VI
 
 
 
