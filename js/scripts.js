@@ -1,23 +1,54 @@
+//Business Logic
+
+
+function timeMachine(number) {
+  if (parseInt(number) === 1) {
+    return "I";
+  } else if (parseInt(number) === 2){
+    return "II";
+  } else if (parseInt(number) === 3) {
+    return "III";
+  } else if (parseInt(number) === 4) {
+    return "IV";
+  } else if (parseInt(number) === 5) {
+    return "V";
+  } else if (parseInt(number) === 6) {
+    return "VI";
+  } else if (parseInt(number) === 7) {
+    return "VII";
+  } else if (parseInt(number) === 8) {
+    return "VIII";
+  } else if (parseInt(number) === 9) {
+    return "IX";
+  } else if (parseInt(number) === 10) {
+    return "X";
+  } else if (parseInt(number) === 50) {
+    return "L";
+  } else if (parseInt(number) === 100) {
+    return "C";
+  } else if (parseInt(number) === 500) {
+    return "D";
+  } else if (parseInt(number) === 1000) {
+    return "M";
+  }
+
+
+
+
+}
+
+
+
+
+
+
+//UI logic
+
 $(document).ready(function() {
-  $("#favoriteThings").submit(function(event) {
+  $("form#output").submit(function (event) {
     event.preventDefault();
-    const animal = $("input#animal").val();
-    const color = $("input#color").val();
-    const movie = $("input#movie").val();
-    const superhero = $("input#superhero").val();
-    
-    let favoriteThings = [animal, color, movie, superhero];
-    console.log(favoriteThings);
-    console.log(favoriteThings[0], favoriteThings[1], favoriteThings[2]);
-    let newFavoriteThings = [];
-    newFavoriteThings.push(favoriteThings[0], favoriteThings[1], favoriteThings[2]);
-    console.log("newFavoriteThings = " + newFavoriteThings);
-
-
-    $(".animaloutput").text(favoriteThings[0]);
-    $(".coloroutput").text(favoriteThings[1]);
-    $(".movieoutput").text(favoriteThings[2]);
-
-    $("#result").show();
-  });
-});
+    const rommie = $("#num-input").val();
+    const result = " " + timeMachine(rommie);
+    $("#display").html(result);
+  })
+})
